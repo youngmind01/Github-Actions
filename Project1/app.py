@@ -3,13 +3,13 @@ from flask import Flask, request
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
-def index():
+def test_index():
     if request.method == 'POST':
         name = request.form['name']
         email = request.form['email']
         favorite_movie = request.form['favorite_movie']
         
-        output = f'Name: {name}<br><br>Email: {email}<br><br>Favorite Movie: {favorite_movie}'
+        test_output = f'Name: {name}<br><br>Email: {email}<br><br>Favorite Movie: {favorite_movie}'
         
         return '''
         <html>
