@@ -5,7 +5,7 @@ from flask import Flask, request
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
-def test_index():
+def index():
     if request.method == 'POST':
         name = request.form['name']
         email = request.form['email']
@@ -34,7 +34,7 @@ def test_index():
             </div>
         </body>
         </html>
-        '''.format_map({'output': output})
+        '''.format_map({'output': test_output})
     
     return '''
         <html>
