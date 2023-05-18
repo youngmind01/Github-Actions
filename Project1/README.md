@@ -1,4 +1,13 @@
 
+# A step by step guiude on how to install and configure Self Hosted Runner
+
+ Firewall setup // make sure you have port 80,443 open for inbound, and same thing for outbound on your runner before proceeding with the below.
+
+ - From your Main repo, navigate to settings
+ - Click on Actions tab from the left side menu
+ - Select runner
+ - Choose the OS and architecture you will be using as runner // e.g Linux, 64bit arc.
+
 # Download
 **Create a folder**
 $ mkdir actions-runner && cd actions-runner
@@ -14,7 +23,10 @@ $ tar xzf ./actions-runner-linux-x64-2.304.0.tar.gz
 
 # Configure
 **Create the runner and start the configuration experience**
-$ ./config.sh --url https://github.com/youngmind01/Github-Actions --token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx# Last step, 
+$ ./config.sh --url https://github.com/youngmind01/Github-Actions --token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// make sure nobdoy else sees your token.
+
+# Last step
 
 run it!
 $ ./run.sh
